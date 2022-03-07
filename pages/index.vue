@@ -1,83 +1,20 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            sss
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> kontinue </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <div class="wrapper">
+    <div class="card-container">
+      <h3>this is a text</h3>
+<!--      loop here -->
+      <div class="card-berita">
+        <div class="image-container">
+          <img src="../static/modoclogo.png" alt="news picture">
+        </div>
+      </div>
+      <div>
+        <button class="lihat-lainnya-btn">
+          Lihat Lainnya
+        </button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -89,7 +26,9 @@ export default {
 
   },
   computed: {
-    ...mapState(['lembarberita'])
+    ...mapState([
+      'lembarberita'
+    ])
   },
   mounted() {
     this.getLembarBerita()
@@ -103,3 +42,49 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.image-container{
+  height: 20rem;
+  width: 100%;
+  background-color: red;
+  img{
+    width: 20%;
+    height: 10%;
+    object-fit: cover;
+  }
+}
+body{
+  background-color: #f3f4f6;
+}
+.card-berita {
+  display: flex;
+}
+.card-container{
+  padding: 15px;
+}
+
+.wrapper{
+  border-radius: 10px ;
+  margin: 5em 25em 5em 25em;
+  display: flex;
+  flex-basis: 100%;
+  height: 80vh;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  background-color: white;
+}
+
+.lihat-lainnya-btn{
+  padding: 9px 19px;
+  background-color: white;
+  border-radius: 30px;
+  border: 1px solid lightgrey;
+}
+
+.lihat-lainnya-btn:hover{
+  background-color: #767676;
+  border: 1px solid #767676;
+
+}
+</style>
