@@ -2,25 +2,12 @@
   <div class="wrapper">
     <div class="card-container">
       <h3>Lembar Berita</h3>
-<!--      loop here -->
       <div v-for="(berita,idx) in lembarberita"  :key="idx" class="card-berita" >
-        <div class="image-container">
-          <img lazy :src="berita.img_banner" :alt="berita.title">
-          <div class="side-container">
-            <div class="profile-container">
-              <img lazy :src="berita.img_profile" alt="profile pict">
-              <div class="profile-info">
-                <h5>{{berita.first_name}} {{berita.last_name}}</h5>
-                <h6>{{berita.created_at}}</h6>
-              </div>
-            </div>
-              <h5>{{berita.title}}</h5>
-          </div>
-        </div>
+        <card-berita :berita="berita"></card-berita>
       </div>
       <div class="btn-container">
-        <button class="lihat-lainnya-btn">
-          Lihat Lainnya
+        <button class="lihat-lainnya-btn" @click="onLihatlainnya" >
+          Lihat Lainnya <img lazy src="https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/16/000000/external-arrow-arrow-line-royyan-wijaya-detailed-outline-royyan-wijaya-12.png"/>
         </button>
       </div>
     </div>
@@ -29,25 +16,31 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import cardBerita from "~/components/cardBerita";
 
 export default {
   name: 'IndexPage',
-  head: {
-
-  },
+  components: cardBerita,
+  data: () => ({
+    limit: 5
+  }),
   computed: {
     ...mapState([
       'lembarberita'
     ])
   },
   mounted() {
-    this.getLembarBerita()
+    this.getLembarBerita(this.limit)
   },
 
   methods: {
     ...mapActions([
       'getLembarBerita'
-    ])
+    ]),
+    onLihatlainnya(){
+      this.limit += 5
+      this.getLembarBerita(this.limit)
+    }
 
   }
 }
@@ -68,15 +61,29 @@ export default {
   }
   .side-container {
     grid-column: 2 / 3;
+    h3{
+      color: #485066;
+      font-weight: normal;
+    }
     .profile-container{
-    margin-bottom: 10px;
+      margin-bottom: 10px;
       display: flex;
+
       img{
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2.4rem;
+        height: 2.4rem;
       }
       .profile-info{
         margin-top: 10px;
+
+        h5{
+          font-weight: normal;
+          color: #65748a;
+        }
+        h6{
+          font-weight: normal;
+          color: #9da0b1;
+        }
       }
     }
   }
@@ -88,11 +95,12 @@ export default {
 
 body{
   background-color: #f3f4f6;
+  font-family: "Roboto",sans-serif!important;
 }
 .card-berita {
   display: flex;
-  height: 90%
-;
+  height: 95%;
+  margin-bottom: 15px;
 }
 .card-container{
   overflow: auto;
@@ -100,22 +108,24 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 100%;
+  h3{
+    font-weight: normal;
+    margin-bottom: 12px;
+  }
 }
 
 .wrapper{
   border-radius: 10px ;
-  margin: 5em 25em 5em 25em;
+  margin: 5rem 27rem 0 27rem;
   display: flex;
   flex-basis: 100%;
-  height: 80vh;
-  /*justify-content: center;*/
-  /*align-items: center;*/
+  height: 85vh;
   background-color: white;
+
 }
 
 .lihat-lainnya-btn{
-  padding: 9px 19px;
+  padding: 9px 25px;
   background-color: white;
   border-radius: 30px;
   border: 1px solid lightgrey;
@@ -128,4 +138,24 @@ body{
   transition: 0.5s;
 
 }
+
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    margin:5rem 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    margin:5rem 0 0 0;
+  }
+  .image-container {
+    display: block;
+  }
+  .card-berita {
+    margin-bottom: 30%;
+  }
+}
+
+
 </style>

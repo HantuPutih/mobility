@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12a39a27-9012-4590-9078-8bf17fe47b52" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cardBerita.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/cardBerita.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
     </list>
@@ -14,6 +14,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="262WDGM2iW6Xc0OaSISzpc1VSzK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -58,7 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1646622040364</updated>
       <workItem from="1646622041570" duration="17452000" />
-      <workItem from="1646697801442" duration="3519000" />
+      <workItem from="1646697801442" duration="3619000" />
+      <workItem from="1646708516542" duration="8684000" />
     </task>
     <servers />
   </component>
