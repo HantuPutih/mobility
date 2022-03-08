@@ -153,7 +153,7 @@ body{
     display: block;
   }
   .card-berita {
-    margin-bottom: 30%;
+    margin-bottom: 15vh;
   }
 }
 
