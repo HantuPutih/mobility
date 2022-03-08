@@ -9,7 +9,7 @@ export const mutations = {
 }
 
 export const actions = {
-  async getLembarBerita({ commit }) {
+  async getLembarBerita({ commit },payload) {
     const { data } = await axios.get('https://apis.modoc.co.id/news/release?limit=5&offset=1')
     commit('SET_LEMBAR_BERITA', data.news_release)
   },

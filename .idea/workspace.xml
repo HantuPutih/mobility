@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12a39a27-9012-4590-9078-8bf17fe47b52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/cardBerita.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/topBar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/modoclogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NuxtLogo.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Tutorial.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/VuetifyLogo.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
@@ -65,7 +57,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646622040364</updated>
-      <workItem from="1646622041570" duration="14882000" />
+      <workItem from="1646622041570" duration="17452000" />
+      <workItem from="1646697801442" duration="3519000" />
     </task>
     <servers />
   </component>
@@ -82,6 +75,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
