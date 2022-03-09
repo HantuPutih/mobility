@@ -1,19 +1,13 @@
 <template>
   <div>
-  <top-bar/>
-<!--    <v-container>-->
-      <Nuxt />
-<!--    </v-container>-->
+    <top-bar/>
+    <Nuxt />
   </div>
 </template>
 
 <script>
 export default {
   name: 'DefaultLayout',
-  data() {
-    return {
-    }
-  },
 }
 </script>
 
